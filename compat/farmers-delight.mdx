@@ -1,0 +1,70 @@
+---
+title: "Farmer's Delight Compatibility — Yeast 'n Feast"
+description: "Install Farmer's Delight to unlock Garden Soup, Ginger Tea, and Spiced Flatbread in Yeast 'n Feast, each using Farmer's Delight cooking mechanics."
+---
+
+When Farmer's Delight (for Minecraft 1.20.1) is installed, Yeast 'n Feast registers three additional food items that slot naturally into Farmer's Delight's cooking and recipe ecosystem. Garden Soup and Ginger Tea are prepared using the Farmer's Delight Cooking Pot, while Spiced Flatbread uses a standard shapeless crafting recipe that requires Farmer's Delight's dough tag.
+
+<Note>
+  This integration activates automatically when the mod ID `farmersdelight` is detected. No configuration is required.
+</Note>
+
+## Added items
+
+<AccordionGroup>
+  <Accordion title="Garden Soup">
+    A hearty bowl dish that grants the **Overfed** effect for 4:00 on consumption. Garden Soup restores **13 nutrition** at **0.8 saturation modifier**, making it one of the most filling bowl items in the mod.
+
+    Overfed prevents your saturation from draining while still allowing you to eat food normally — useful for extended exploration or combat.
+
+    **Recipe** — Farmer's Delight Cooking Pot, yields 1:
+
+    | Ingredient | Source |
+    |---|---|
+    | Cabbage (tag: `c:crops/cabbage`) | Farmer's Delight |
+    | Onion (tag: `c:crops/onion`) | Farmer's Delight |
+    | Rye | Yeast 'n Feast |
+    | Carrot | Minecraft |
+    | Bowl (container) | Minecraft |
+  </Accordion>
+
+  <Accordion title="Ginger Tea">
+    A bottled drink that restores **6 nutrition** at **0.1 saturation modifier** and **removes a single active status effect** on consumption, functioning similarly to Yeast 'n Feast's base Milk Bottle item.
+
+    Ginger Tea is prepared in the Farmer's Delight Cooking Pot and returns a Glass Bottle when consumed.
+
+    **Recipe** — Farmer's Delight Cooking Pot, yields 1:
+
+    | Ingredient | Source |
+    |---|---|
+    | Milk (tag: `forge:milk`) | Minecraft |
+    | Lemon | Yeast 'n Feast |
+    | Ginger | Yeast 'n Feast |
+    | Glass Bottle (container) | Minecraft |
+  </Accordion>
+
+  <Accordion title="Spiced Flatbread">
+    A simple bread-type food that restores **10 nutrition** at **0.8 saturation modifier**. Spiced Flatbread is crafted using Farmer's Delight's dough tag, so it works with any dough source that registers to the `forge:dough` tag.
+
+    **Recipe** — Shapeless crafting, yields 1:
+
+    | Ingredient | Source |
+    |---|---|
+    | Dough (tag: `forge:dough`) | Farmer's Delight |
+    | Ginger | Yeast 'n Feast |
+    | Garlic | Yeast 'n Feast |
+    | Seeds (tag: `c:seeds`) | Any |
+  </Accordion>
+</AccordionGroup>
+
+## Item summary
+
+| Item | Type | Nutrition | Saturation | Effect |
+|---|---|---|---|---|
+| Garden Soup | Bowl (FeastItem) | 13 | 0.8 | Overfed (4:00) |
+| Ginger Tea | Bottle | 6 | 0.1 | Removes one effect |
+| Spiced Flatbread | Food | 10 | 0.8 | — |
+
+<Tip>
+  Garden Soup is one of the highest-nutrition bowl dishes in Yeast 'n Feast, offering more food value than any base-mod bowl item. Pair it with a plate dish for a sustained exploration buff.
+</Tip>

@@ -1,0 +1,68 @@
+---
+title: "Farm and Charm Compatibility — Yeast 'n Feast"
+description: "Farm and Charm adds Strawberries Jam, Maple-Rye Pancakes, and Oatmeal with Elderberries to Yeast 'n Feast using Farm and Charm crops and stations."
+---
+
+When Farm and Charm is installed, Yeast 'n Feast registers three additional food items that use Farm and Charm's crops and crafting stations. Strawberries Jam is brewed in the Keg from Farm and Charm's strawberries, while Maple-Rye Pancakes and Oatmeal with Elderberries use Farm and Charm's Roaster and Crafting Bowl respectively.
+
+<Note>
+  This integration activates automatically when the mod ID `farm_and_charm` is detected. No configuration is required.
+</Note>
+
+## Added items
+
+<AccordionGroup>
+  <Accordion title="Strawberries Jam">
+    A jar of jam brewed from Farm and Charm's strawberries. Restores **6 nutrition** at **0.8 saturation modifier**. Brewed in the Yeast 'n Feast **Keg**.
+
+    **Recipe** — Keg, brew time 3600 ticks (3 minutes), yields 1:
+
+    | Slot | Ingredient | Source |
+    |---|---|---|
+    | Ingredients | Strawberry ×3 | Farm and Charm |
+    | Tankard slot | Jar | Yeast 'n Feast |
+    | Yeast slot | Sugar | Minecraft |
+  </Accordion>
+
+  <Accordion title="Maple-Rye Pancakes">
+    A plated feast dish that grants the **Vigorous** effect for 4:00 on consumption. Restores **12 nutrition** at **0.8 saturation modifier**. Prepared in the Farm and Charm **Roaster**.
+
+    Vigorous increases healing received and raises maximum health, making this a strong option before combat or boss encounters.
+
+    **Recipe** — Farm and Charm Roaster, yields 1:
+
+    | Ingredient | Source |
+    |---|---|
+    | Rye ×3 | Yeast 'n Feast |
+    | Dough (tag: `forge:dough`) | Any |
+    | Butter (tag: `farm_and_charm:butter`) | Farm and Charm |
+    | Maple Syrup | Yeast 'n Feast |
+    | Bowl (container) | Minecraft |
+  </Accordion>
+
+  <Accordion title="Oatmeal with Elderberries">
+    A bowl feast dish that grants the **Overfed** effect for 4:00 on consumption. Restores **12 nutrition** at **0.8 saturation modifier**. Prepared in the Farm and Charm **Crafting Bowl**.
+
+    Overfed prevents saturation from draining while still allowing you to consume food. This makes it a reliable choice for long sessions where you want to maintain your hunger bar passively.
+
+    **Recipe** — Farm and Charm Crafting Bowl, yields 1:
+
+    | Ingredient | Source |
+    |---|---|
+    | Milk (tag: `forge:milk`) | Minecraft |
+    | Oat (tag: `farm_and_charm:oat`) | Farm and Charm |
+    | Elderberries | Yeast 'n Feast |
+  </Accordion>
+</AccordionGroup>
+
+## Item summary
+
+| Item | Type | Nutrition | Saturation | Effect |
+|---|---|---|---|---|
+| Strawberries Jam | Jam (ConsumableItem) | 6 | 0.8 | — |
+| Maple-Rye Pancakes | Plate (FeastItem) | 12 | 0.8 | Vigorous (4:00) |
+| Oatmeal with Elderberries | Bowl (FeastItem) | 12 | 0.8 | Overfed (4:00) |
+
+<Tip>
+  Maple-Rye Pancakes and Oatmeal with Elderberries pair well together: eat the Oatmeal first to trigger Overfed (locking in your saturation), then eat the Pancakes for the Vigorous buff.
+</Tip>

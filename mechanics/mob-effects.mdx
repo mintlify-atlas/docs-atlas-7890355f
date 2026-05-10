@@ -1,0 +1,136 @@
+---
+title: "Mob Effects: Overfed, Vigorous & Mead Buffs"
+description: "Overfed and Vigorous from feast dishes, plus Resistance, Strength, and Regeneration from meads — what each does and strategy tips for using them."
+---
+
+Yeast 'n Feast introduces two custom mob effects tied exclusively to its feast dishes, alongside three vanilla effects granted by its meads. Knowing when to eat a bowl dish versus a plate dish — and which mead to bring — is the difference between a comfortable adventure and a dangerous one.
+
+## Custom effects
+
+### Overfed
+
+**Overfed** is a beneficial effect with a warm yellow colour (`#DCD789`). It is granted for **4 minutes (4800 ticks)** by all bowl feast dishes.
+
+**What it does:** Overfed prevents food exhaustion from reducing your saturation while the effect is active. The mechanic works by cancelling out exhaustion buildup each tick, except when your character is healing from natural regeneration (food level 18 or above while hurt). You can still eat food normally while Overfed is active — the effect does not lock your hunger bar.
+
+**Attribute modifier:** Overfed applies a `MOVEMENT_SPEED` modifier of **−10%** (`MULTIPLY_TOTAL`). You move slightly slower while full — a fair trade for the saturation lock.
+
+**Foods that grant Overfed:**
+
+<CardGroup cols={2}>
+  <Card title="Sweet Porridge" icon="bowl-food">
+    10 nutrition · 0.6 saturation modifier
+  </Card>
+  <Card title="Spiced Porridge" icon="bowl-food">
+    10 nutrition · 0.6 saturation modifier
+  </Card>
+  <Card title="Barley and Beef Stew" icon="bowl-food">
+    14 nutrition · 0.75 saturation modifier
+  </Card>
+  <Card title="Salmon Chowder" icon="bowl-food">
+    12 nutrition · 0.8 saturation modifier
+  </Card>
+  <Card title="Cheese Soup" icon="bowl-food">
+    12 nutrition · 0.8 saturation modifier
+  </Card>
+</CardGroup>
+
+<Note>
+  The item tooltip reads **"Overfed (4:00)"** in blue on all bowl dishes.
+</Note>
+
+---
+
+### Vigorous
+
+**Vigorous** is a beneficial effect with a soft green colour (`#90C19A`). It is granted for **4 minutes (4800 ticks)** by all plate feast dishes.
+
+**What it does:** Vigorous increases your maximum health and also increases healing received. The health increase comes from a `MAX_HEALTH` attribute modifier of **+6.0** (`ADDITION`) — in Minecraft's health system, 2 health points equal 1 heart, so this adds **3 extra hearts** to your health bar for the duration.
+
+**Attribute modifier:** `MAX_HEALTH` **+6** (addition) — equivalent to 3 extra hearts.
+
+**Foods that grant Vigorous:**
+
+<CardGroup cols={2}>
+  <Card title="Mead-Braised Pork" icon="plate-utensils">
+    14 nutrition · 0.75 saturation modifier
+  </Card>
+  <Card title="Herbal Cod" icon="plate-utensils">
+    10 nutrition · 0.6 saturation modifier
+  </Card>
+  <Card title="Lemon-Glazed Chicken" icon="plate-utensils">
+    14 nutrition · 0.75 saturation modifier
+  </Card>
+  <Card title="Forager's Feast" icon="plate-utensils">
+    12 nutrition · 0.8 saturation modifier
+  </Card>
+  <Card title="Maple-Glazed Rabbit" icon="plate-utensils">
+    10 nutrition · 0.6 saturation modifier
+  </Card>
+  <Card title="Stuffed Rye Dumplings" icon="plate-utensils">
+    11 nutrition · 0.8 saturation modifier · bonus Strength I
+  </Card>
+</CardGroup>
+
+<Note>
+  The item tooltip reads **"Vigorous (4:00)"** in blue on all plate dishes. Stuffed Rye Dumplings also grant a brief Strength I effect (10 seconds) from their food properties in addition to Vigorous.
+</Note>
+
+---
+
+## Mead effects
+
+Meads grant vanilla effects on consumption. Each mead applies its effect at **amplifier 1** (level II) for the listed duration.
+
+<AccordionGroup>
+  <Accordion title="Sweet Meads — Resistance II (6:00)">
+    Sweet meads grant **Resistance II** for 6 minutes, reducing all incoming damage by 20%.
+
+    **Items:** Honey Mead, Molasses Mead
+
+    The item tooltip reads **"Resistance II (6:00)"** in blue.
+  </Accordion>
+  <Accordion title="Sour Meads — Strength II (6:00)">
+    Sour meads grant **Strength II** for 6 minutes, increasing melee damage by 6 per hit (3 hearts).
+
+    **Items:** Sour Mead, Thornberry Mead
+
+    The item tooltip reads **"Strength II (6:00)"** in blue.
+  </Accordion>
+  <Accordion title="Floral Meads — Regeneration II (4:00)">
+    Floral meads grant **Regeneration II** for 4 minutes, restoring health every 25 ticks.
+
+    **Items:** Blossom Mead, Amber Mead
+
+    The item tooltip reads **"Regeneration II (4:00)"** in blue.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Milk Bottle
+
+The **Milk Bottle** is a counter to harmful mob effects. Unlike a standard bucket of milk — which removes all effects at once — the Milk Bottle **removes one random harmful (non-beneficial) effect**. Beneficial effects such as Overfed, Vigorous, and mead buffs are never removed.
+
+<Tip>
+  Keep a Milk Bottle in your hotbar when you are poisoned, slowed, or otherwise debuffed. It will clear one harmful effect at random while leaving your active food and mead buffs intact.
+</Tip>
+
+---
+
+## Strategy tips
+
+<AccordionGroup>
+  <Accordion title="When to eat bowl dishes (Overfed)">
+    Eat a bowl dish before long sessions of mining, building, or farming where you want your saturation to last as long as possible. The 10% speed reduction is barely noticeable during stationary work. Avoid bowl dishes immediately before combat where mobility matters.
+  </Accordion>
+  <Accordion title="When to eat plate dishes (Vigorous)">
+    Eat a plate dish before entering a dungeon, fighting a boss, or exploring dangerous biomes. The 3 extra hearts give you a meaningful buffer. Time your meal so Vigorous is active when you first engage — the 4-minute window is enough for most encounters.
+  </Accordion>
+  <Accordion title="Combining effects">
+    Overfed and Vigorous cannot both be active at the same time unless you eat a bowl dish and a plate dish back-to-back (both last 4 minutes). Consider pairing a plate dish with a Sweet or Floral Mead: Vigorous adds health and the mead adds damage reduction or regeneration on top.
+  </Accordion>
+  <Accordion title="Removing unwanted effects">
+    The Milk Bottle only removes harmful (non-beneficial) effects, so you cannot use it to shed Overfed's speed penalty deliberately. If you want to end Overfed early, you will need to wait for it to expire. Use Milk Bottles primarily for clearing poison, weakness, or other debuffs from enemies.
+  </Accordion>
+</AccordionGroup>

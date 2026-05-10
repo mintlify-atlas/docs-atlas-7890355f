@@ -1,0 +1,81 @@
+---
+title: "Hexalia Compatibility — Yeast 'n Feast"
+description: "Install Hexalia to unlock Chillberries Jam, Stuffed Mandrake, Frostgale Mead, and Sunfire Tomato Bruschetta using Hexalia's magical ingredients."
+---
+
+When Hexalia is installed, Yeast 'n Feast registers four additional items that draw on Hexalia's unique botanical ingredients — chillberries, galeberries, mandrake, and sunfire tomato. These items use Yeast 'n Feast's existing crafting stations (the Keg for fermented items and standard shapeless recipes for others), and they fit into the same feast, mead, and jam categories as the base mod's content.
+
+<Note>
+  This integration activates automatically when the mod ID `hexalia` is detected. No configuration is required.
+</Note>
+
+## Added items
+
+<AccordionGroup>
+  <Accordion title="Chillberries Jam">
+    A jar of jam made from Hexalia's chillberries. Restores **6 nutrition** at **0.8 saturation modifier**. Brewed in the Yeast 'n Feast **Keg**.
+
+    **Recipe** — Keg, brew time 7200 ticks (6 minutes), yields 1:
+
+    | Slot | Ingredient | Source |
+    |---|---|---|
+    | Ingredients | Chillberries ×3 | Hexalia |
+    | Tankard slot | Jar | Yeast 'n Feast |
+    | Yeast slot | Sugar | Minecraft |
+  </Accordion>
+
+  <Accordion title="Stuffed Mandrake">
+    A plated feast dish that grants the **Vigorous** effect for 4:00 on consumption, and also applies **Overfed I for 60 seconds** as a secondary food effect. Restores **12 nutrition** at **0.8 saturation modifier**.
+
+    Vigorous increases healing received and raises maximum health. The secondary Overfed buff briefly prevents saturation drain after eating.
+
+    **Recipe** — Shapeless crafting, yields 1:
+
+    | Ingredient | Source |
+    |---|---|
+    | Mandrake | Hexalia |
+    | Carrot | Minecraft |
+    | Barley | Yeast 'n Feast |
+    | Garlic | Yeast 'n Feast |
+    | Bowl | Minecraft |
+  </Accordion>
+
+  <Accordion title="Frostgale Mead">
+    A Sweet-type mead brewed from Hexalia's chillberries and galeberries. Grants **Resistance II for 4:00** (displayed as 4800 ticks). Brewed in the Yeast 'n Feast **Keg** and served in a Tankard.
+
+    **Recipe** — Keg, brew time 7200 ticks (6 minutes), yields 1:
+
+    | Slot | Ingredient | Source |
+    |---|---|---|
+    | Ingredient 1 | Chillberries | Hexalia |
+    | Ingredient 2 | Galeberries | Hexalia |
+    | Ingredient 3 | Lemon | Yeast 'n Feast |
+    | Tankard slot | Tankard | Yeast 'n Feast |
+    | Yeast slot | Yeast | Yeast 'n Feast |
+  </Accordion>
+
+  <Accordion title="Sunfire Tomato Bruschetta">
+    A food item made from Hexalia's sunfire tomato, bread, and garlic. Restores **8 nutrition** at **0.8 saturation modifier** and grants **Speed I for 20 seconds** (400 ticks, tier 0).
+
+    **Recipe** — Shapeless crafting, yields 1:
+
+    | Ingredient | Source |
+    |---|---|
+    | Bread (tag: `forge:bread`) | Minecraft / any |
+    | Sunfire Tomato | Hexalia |
+    | Garlic | Yeast 'n Feast |
+  </Accordion>
+</AccordionGroup>
+
+## Item summary
+
+| Item | Type | Nutrition | Saturation | Effect |
+|---|---|---|---|---|
+| Chillberries Jam | Jam (ConsumableItem) | 6 | 0.8 | — |
+| Stuffed Mandrake | Plate (FeastItem) | 12 | 0.8 | Vigorous (4:00) + Overfed I (1:00) |
+| Frostgale Mead | Mead | — | — | Resistance II (4:00) |
+| Sunfire Tomato Bruschetta | Food | 8 | 0.8 | Speed I (0:20) |
+
+<Tip>
+  Frostgale Mead is a Sweet-type mead, matching Honey Mead and Molasses Mead in its Resistance II buff. If you are playing with Hexalia, it adds a third Sweet mead option for the "Sweet Victory" advancement.
+</Tip>

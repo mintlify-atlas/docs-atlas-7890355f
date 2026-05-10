@@ -1,0 +1,134 @@
+---
+title: "Functional, Food & Storage Blocks"
+description: "All Yeast 'n Feast blocks: Tree Tap, Keg, Maple Syrup Cauldron, Cheese Press, cheese wheel food blocks, ingredient bags, and grain storage blocks."
+---
+
+Yeast 'n Feast adds several craftable blocks that drive its core gameplay loops — tapping maple trees for syrup, brewing mead in a keg, pressing cheese wheels, and compactly storing bulk ingredients. Food blocks like cheese wheels work similarly to vanilla cake: place them and right-click to consume slices directly from the world.
+
+## Functional blocks
+
+### Tree Tap
+
+The Tree Tap attaches to a horizontal face of a Maple Log or Maple Wood block. After the configured drip delay, the tap enters a `dripping` state (shown by particles). Maple Syrup can be collected in two ways once dripping:
+
+- **Right-click the dripping tap with an empty Glass Bottle** — collects one Maple Syrup bottle directly and resets the tap.
+- **Place a plain Cauldron directly below the tap** — the tap auto-fills it when dripping, converting it to a Maple Syrup Cauldron. Right-click the cauldron with a Glass Bottle to drain one bottle of syrup at a time.
+
+<Steps>
+  <Step title="Craft the Tree Tap">
+    Craft the Tree Tap and retrieve it from the crafting output.
+  </Step>
+  <Step title="Place it on a maple log">
+    Right-click a horizontal face of a Maple Log or Maple Wood block to attach the Tree Tap.
+  </Step>
+  <Step title="Wait for the drip cycle">
+    After the drip delay elapses, the tap becomes dripping. Collect syrup via glass bottle or cauldron.
+  </Step>
+</Steps>
+
+<Note>
+  The drip delay is configurable under `functional_blocks.dripDelayTicks` in the common config file. The default is **7200 ticks (6 minutes)**; valid values range from 20 to 24000 ticks. See [Configuration](/compat/configuration) for details.
+</Note>
+
+---
+
+### Maple Syrup Cauldron
+
+The Maple Syrup Cauldron is a specialised cauldron that collects Maple Syrup dripped from a Tree Tap placed above it. Place a plain **Cauldron** on the ground directly beneath a dripping Tree Tap — it converts automatically into a Maple Syrup Cauldron when the tap deposits syrup. You can also fill it manually by right-clicking a Maple Syrup Cauldron with a Maple Syrup item. Right-click the filled cauldron with a Glass Bottle to collect syrup one bottle at a time (reduces the level by 1).
+
+---
+
+### Keg
+
+The Keg is the brewing station for crafting mead. Opening it brings up a custom GUI where you can load ingredients and start a fermentation recipe of type `"keg"`. The Keg also functions as the workstation block for the **Tavern Keeper** villager profession.
+
+<Steps>
+  <Step title="Craft and place the Keg">
+    Craft the Keg and place it in the world.
+  </Step>
+  <Step title="Open the GUI">
+    Right-click the Keg to open the brewing interface.
+  </Step>
+  <Step title="Load your ingredients">
+    Insert the ingredients required by the mead recipe you want to brew.
+  </Step>
+  <Step title="Collect your mead">
+    Wait for the process to complete and take your finished mead from the output slot.
+  </Step>
+</Steps>
+
+<Tip>
+  A Tavern Keeper villager will seek out a nearby Keg as its workstation. Placing a Keg in a village invites Tavern Keeper trades.
+</Tip>
+
+---
+
+### Cheese Press
+
+The Cheese Press is the crafting station for producing cheese wheels. Opening it reveals a custom GUI that accepts `"cheese_press"` recipe types. Place ingredients in the input and collect your finished cheese wheel from the output.
+
+<Steps>
+  <Step title="Craft and place the Cheese Press">
+    Craft the Cheese Press and set it down anywhere.
+  </Step>
+  <Step title="Open the GUI">
+    Right-click the Cheese Press to open the pressing interface.
+  </Step>
+  <Step title="Insert ingredients">
+    Load the ingredients required by the cheese recipe you want to make.
+  </Step>
+  <Step title="Collect the cheese wheel">
+    Retrieve the finished cheese wheel from the output slot.
+  </Step>
+</Steps>
+
+---
+
+## Food blocks
+
+Cheese wheels are placed in the world like a vanilla cake. Right-click a placed wheel to eat a slice; the block updates its state to reflect the remaining slices. Each wheel variant drops a corresponding slice item.
+
+<Columns cols={2}>
+  <Card title="Cheese Wheel" icon="circle">
+    A large cheese wheel (`LCheeseWheelBlock`) with multiple bites. Each bite yields a **Cheese Slice**.
+  </Card>
+  <Card title="Freshwheel" icon="circle">
+    A medium cheese wheel (`MCheeseWheelBlock`). Each bite yields a **Freshwheel Slice**.
+  </Card>
+  <Card title="Duskwheel" icon="circle">
+    A large cheese wheel (`LCheeseWheelBlock`). Each bite yields a **Duskwheel Slice**.
+  </Card>
+  <Card title="Sharpwheel" icon="circle">
+    A medium cheese wheel (`MCheeseWheelBlock`). Each bite yields a **Sharpwheel Slice**.
+  </Card>
+</Columns>
+
+<Note>
+  Cheese wheel items stack to **1**. Place the item to turn it into a food block, then right-click the block to eat slices without picking it up.
+</Note>
+
+---
+
+## Storage blocks
+
+Storage blocks let you compress bulk ingredients into a single block for compact organisation. Bag blocks share the properties of white wool. Grain blocks (Barley Block and Rye Block) share the properties of the vanilla hay block, including its rotatable pillar orientation.
+
+### Ingredient bags
+
+<Columns cols={2}>
+  <Card title="Bag of Elderberries" icon="box" />
+  <Card title="Bag of Garlic" icon="box" />
+  <Card title="Bag of Ginger" icon="box" />
+  <Card title="Bag of Hawthorn Berries" icon="box" />
+  <Card title="Bag of Lemon" icon="box" />
+  <Card title="Bag of Mint" icon="box" />
+  <Card title="Bag of Rose Hips" icon="box" />
+  <Card title="Bag of Thistle" icon="box" />
+</Columns>
+
+### Grain blocks
+
+| Block | Equivalent |
+|---|---|
+| Barley Block | Vanilla Hay Block (rotatable pillar) |
+| Rye Block | Vanilla Hay Block (rotatable pillar) |

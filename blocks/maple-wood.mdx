@@ -1,0 +1,141 @@
+---
+title: "Maple Wood — Blocks, Items & Boats"
+description: "Full Maple wood set in Yeast 'n Feast: logs, planks, stairs, slabs, fences, doors, signs, hanging signs, and boats — how to obtain and use each."
+---
+
+Maple is a fully implemented wood type added by Yeast 'n Feast. It covers every block and item slot that vanilla wood sets provide — logs, planks, all six structural variants, signs, hanging signs, and boats — giving you a complete building palette with a distinct maple aesthetic. Maple trees generate naturally in Forest biomes and can also be grown from a Maple Sapling.
+
+## Obtaining maple wood
+
+Maple Logs drop from Maple Trees, which spawn in Forest biomes alongside oak and birch trees. You can also grow your own trees by planting a **Maple Sapling** on grass or dirt and waiting for it to mature (or using bone meal to speed growth).
+
+<Tip>
+  Use an axe on a Maple Log or Maple Wood block to strip it, converting it to its stripped variant and recovering the bark material.
+</Tip>
+
+---
+
+## Blocks
+
+### Logs and wood
+
+| Block | Notes |
+|---|---|
+| Maple Log | Raw log with bark on all sides (rotatable pillar) |
+| Stripped Maple Log | Log with bark removed; same pillar behaviour |
+| Maple Wood | All-bark block (rotatable pillar) |
+| Stripped Maple Wood | All-bark block with bark removed |
+
+Strip a Maple Log or Maple Wood block by right-clicking it with any axe. The bark is removed and the block converts to its stripped variant in place.
+
+### Planks and derived blocks
+
+Maple Planks are crafted from any maple log variant. All structural blocks below are crafted from Maple Planks in the same recipes as their oak equivalents.
+
+<Columns cols={2}>
+  <Card title="Maple Planks" icon="square">
+    Base crafting material for all maple structural blocks.
+  </Card>
+  <Card title="Maple Stairs" icon="arrow-up-right">
+    Stair block equivalent to Oak Stairs.
+  </Card>
+  <Card title="Maple Slab" icon="minus">
+    Half-block equivalent to Oak Slab.
+  </Card>
+  <Card title="Maple Button" icon="circle-dot">
+    Wooden button equivalent to Oak Button.
+  </Card>
+  <Card title="Maple Pressure Plate" icon="circle-dot">
+    Pressure plate equivalent to Oak Pressure Plate.
+  </Card>
+  <Card title="Maple Fence" icon="grip-lines-vertical">
+    Fence block equivalent to Oak Fence.
+  </Card>
+  <Card title="Maple Fence Gate" icon="door-open">
+    Fence gate equivalent to Oak Fence Gate.
+  </Card>
+  <Card title="Maple Trapdoor" icon="square-arrow-up">
+    Trapdoor equivalent to Oak Trapdoor.
+  </Card>
+  <Card title="Maple Door" icon="door-closed">
+    Door block equivalent to Oak Door.
+  </Card>
+</Columns>
+
+### Leaves and sapling
+
+| Block | Notes |
+|---|---|
+| Maple Leaves | Custom `MapleLeavesBlock`; decays when not connected to a log |
+| Maple Sapling | Grows into a Maple Tree via `MapleTreeGrower`; can be bonemealed |
+| Potted Maple Sapling | Decorative flower-pot variant of the sapling |
+
+### Signs
+
+All maple sign blocks use the custom Maple wood type (`ModWoodTypes.MAPLE`).
+
+| Block | Notes |
+|---|---|
+| Maple Sign | Floor-standing sign |
+| Maple Wall Sign | Wall-mounted sign |
+| Maple Hanging Sign | Ceiling-hanging sign |
+| Maple Hanging Wall Sign | Wall-mounted hanging sign |
+
+---
+
+## Items
+
+### Sign items
+
+Sign items stack to **16**, matching vanilla sign behaviour.
+
+| Item | Placed block |
+|---|---|
+| Maple Sign | Maple Sign / Maple Wall Sign |
+| Maple Hanging Sign | Maple Hanging Sign / Maple Hanging Wall Sign |
+
+### Boats
+
+<Columns cols={2}>
+  <Card title="Maple Boat" icon="sailboat">
+    Standard boat crafted from Maple Planks. Equivalent to Oak Boat.
+  </Card>
+  <Card title="Maple Chest Boat" icon="sailboat">
+    Chest-equipped boat for transporting items. Equivalent to Oak Chest Boat.
+  </Card>
+</Columns>
+
+---
+
+## Full block and item reference
+
+<AccordionGroup>
+  <Accordion title="All maple blocks">
+    - `maple_log`
+    - `stripped_maple_log`
+    - `maple_wood`
+    - `stripped_maple_wood`
+    - `maple_planks`
+    - `maple_stairs`
+    - `maple_slab`
+    - `maple_button`
+    - `maple_pressure_plate`
+    - `maple_fence`
+    - `maple_fence_gate`
+    - `maple_trapdoor`
+    - `maple_door`
+    - `maple_sign`
+    - `maple_wall_sign`
+    - `maple_hanging_sign`
+    - `maple_hanging_wall_sign`
+    - `maple_leaves`
+    - `maple_sapling`
+    - `potted_maple_sapling`
+  </Accordion>
+  <Accordion title="All maple items">
+    - `maple_sign`
+    - `maple_hanging_sign`
+    - `maple_boat`
+    - `maple_chest_boat`
+  </Accordion>
+</AccordionGroup>

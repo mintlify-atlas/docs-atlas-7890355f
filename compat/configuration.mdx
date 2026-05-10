@@ -1,0 +1,68 @@
+---
+title: "Configuration Reference — Yeast 'n Feast Common Config"
+description: "Configure Yeast 'n Feast via yeastnfeast-common.toml. Adjust the Tree Tap drip delay from 20 ticks (1 second) up to 24000 ticks (20 minutes)."
+---
+
+Yeast 'n Feast generates a single common configuration file on first launch. This file controls server-side and client-side shared behaviour, meaning it applies consistently across both singleplayer and multiplayer environments. The client config is currently empty and reserved for future use.
+
+## Config file location
+
+```
+config/yeastnfeast-common.toml
+```
+
+This file is created automatically in your instance's `config/` folder the first time the mod loads. You can edit it with any text editor; changes take effect on the next world load or server restart.
+
+<Note>
+  This is a **common** config (type `COMMON` in Forge terminology), meaning it is read by both the client and the server. On a dedicated server, the file lives in the server's `config/` directory and governs all players connected to that server.
+</Note>
+
+## Settings
+
+### `[functional_blocks]`
+
+Settings for Yeast 'n Feast's interactive functional blocks, such as the Tree Tap.
+
+#### `dripDelayTicks`
+
+Controls how many ticks must pass before the **Tree Tap** begins dripping Maple Syrup after being placed on a valid maple tree.
+
+| Property | Value |
+|---|---|
+| Default | `7200` ticks (6 minutes) |
+| Minimum | `20` ticks (1 second) |
+| Maximum | `24000` ticks (20 minutes) |
+
+**Ticks-to-time reference:**
+
+| Ticks | Real time |
+|---|---|
+| 20 | 1 second |
+| 1200 | 1 minute |
+| 7200 | 6 minutes (default) |
+| 12000 | 10 minutes |
+| 24000 | 20 minutes |
+
+<Tip>
+  20 ticks = 1 second. To convert a desired wait time in seconds to ticks, multiply by 20. For example, a 5-minute delay is `5 × 60 × 20 = 6000` ticks.
+</Tip>
+
+## Example config file
+
+```toml yeastnfeast-common.toml
+[functional_blocks]
+	#Ticks required before the Tree Tap begins dripping (default: 7200 ticks = 6 minutes)
+	#Range: 20 ~ 24000
+	dripDelayTicks = 7200
+```
+
+To reduce the delay for faster Maple Syrup collection, lower the value:
+
+```toml yeastnfeast-common.toml
+[functional_blocks]
+	#Ticks required before the Tree Tap begins dripping (default: 7200 ticks = 6 minutes)
+	#Range: 20 ~ 24000
+	dripDelayTicks = 1200
+```
+
+This sets the drip delay to 1200 ticks (1 minute). Values outside the `20–24000` range will be clamped to the nearest bound by Forge automatically.

@@ -1,0 +1,42 @@
+---
+title: "Compatibility Overview — Yeast 'n Feast Integrations"
+description: "Yeast 'n Feast supports Farmer's Delight, Hexalia, and Farm and Charm. Extra items and recipes unlock automatically when those mods are detected."
+---
+
+Yeast 'n Feast supports soft compatibility with three popular food and farming mods. All integrations are completely optional — the base mod works fine without any of them installed. When a supported mod is detected at load time, Yeast 'n Feast automatically registers the relevant items and recipes for that mod; nothing needs to be configured manually. All compat content is visible in JEI when the relevant mod is installed alongside Yeast 'n Feast.
+
+<CardGroup cols={3}>
+  <Card
+    title="Farmer's Delight"
+    icon="bowl-food"
+    href="/compat/farmers-delight"
+  >
+    Three new food items crafted using Farmer's Delight's cooking station and ingredients, including Garden Soup, Ginger Tea, and Spiced Flatbread.
+  </Card>
+  <Card
+    title="Hexalia"
+    icon="flask"
+    href="/compat/hexalia"
+  >
+    Four items built around Hexalia's magical herbs and berries: Chillberries Jam, Stuffed Mandrake, Frostgale Mead, and Sunfire Tomato Bruschetta.
+  </Card>
+  <Card
+    title="Farm and Charm"
+    icon="wheat"
+    href="/compat/farm-and-charm"
+  >
+    Three items using Farm and Charm's crops: Strawberries Jam, Maple-Rye Pancakes, and Oatmeal with Elderberries.
+  </Card>
+</CardGroup>
+
+## How compatibility works
+
+Yeast 'n Feast uses Forge's `ModList` API to check whether a supported mod is loaded before registering any compat items or recipes. This means:
+
+- **No items are added** from a compat module unless the required mod is present.
+- **No recipes are registered** that reference items from a missing mod.
+- **Nothing breaks** if you add or remove a compat mod between sessions, as long as you do not have compat items in your inventory or world when removing a dependency.
+
+<Note>
+  All compat items share the same item group tab as the rest of Yeast 'n Feast content.
+</Note>

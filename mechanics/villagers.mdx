@@ -1,0 +1,90 @@
+---
+title: "Tavern Keeper: Villager Profession & Workstation"
+description: "The Tavern Keeper uses a placed Keg as its workstation. Learn how to employ one, what trades to expect, and how the Keg POI system works."
+---
+
+Yeast 'n Feast adds a custom villager profession called the **Tavern Keeper**. Like all vanilla professions, an unemployed villager will claim a nearby workstation and become a Tavern Keeper automatically, opening up a unique set of trades centred around the mod's brewing and food items.
+
+## The Tavern Keeper profession
+
+The Tavern Keeper is registered under the ID `yeastnfeast:tavernkeeper` and displays in-game as **"Tavern Keeper"**. It uses the cleric work sounds (the same audio cue you hear from clerics at their brewing stands), which gives a thematic brewing-and-alchemy feel.
+
+<CardGroup cols={2}>
+  <Card title="Profession ID" icon="tag">
+    `yeastnfeast:tavernkeeper`
+  </Card>
+  <Card title="Workstation" icon="cube">
+    Keg (`yeastnfeast:keg`)
+  </Card>
+  <Card title="Work sounds" icon="volume-high">
+    Cleric work sounds (`VILLAGER_WORK_CLERIC`)
+  </Card>
+  <Card title="Display name" icon="user">
+    Tavern Keeper
+  </Card>
+</CardGroup>
+
+---
+
+## Setting up a workstation
+
+A Tavern Keeper requires a **placed Keg block** in the world — not just a Keg item in a chest. The Keg acts as a Point of Interest (POI) that the villager pathfinds to and claims as its workstation.
+
+<Steps>
+  <Step title="Craft a Keg">
+    Use the crafting table to make a Keg. Check JEI for the recipe. You need one Keg per Tavern Keeper you want to employ.
+  </Step>
+  <Step title="Place the Keg near a village">
+    Set the Keg down inside or adjacent to a village, within range of the villager's pathfinding. Keep it accessible — the villager must be able to walk to it.
+  </Step>
+  <Step title="Wait for an unemployed villager to claim it">
+    Any unemployed villager (one without a bed-associated profession) will seek out the unclaimed Keg POI and become a Tavern Keeper. This happens automatically during the villager's work schedule.
+  </Step>
+  <Step title="Interact to view trades">
+    Once a villager has claimed the Keg, right-click it to open the trading interface and browse available trades.
+  </Step>
+</Steps>
+
+<Note>
+  The Keg must be **placed as a block** in the world. A Keg sitting in a chest or your inventory does not register as a POI and will not attract villagers.
+</Note>
+
+---
+
+## Trades
+
+The Tavern Keeper trades items related to brewing and the mod's food system. Exact trade listings vary by villager level and are randomised within the profession's trade table.
+
+<Tip>
+  Use **JEI** (Just Enough Items) to browse all Tavern Keeper trade options in-game. Open JEI, search for `yeastnfeast`, and look for the villager trade entries to see what each level offers.
+</Tip>
+
+Trades typically span five levels as the villager gains experience through repeated trading:
+
+| Level | Villager title | Unlocked by |
+|-------|---------------|-------------|
+| 1 | Novice | Default (first claim) |
+| 2 | Apprentice | Trading at level 1 |
+| 3 | Journeyman | Trading at level 2 |
+| 4 | Expert | Trading at level 3 |
+| 5 | Master | Trading at level 4 |
+
+Trade your way through each level to unlock higher-tier items. Emeralds are the standard currency, with some trades accepting mod-specific ingredients.
+
+---
+
+## Mechanics notes
+
+<AccordionGroup>
+  <Accordion title="Villager reassignment">
+    If a Tavern Keeper loses access to its Keg (the block is broken or inaccessible), it will become unemployed again and lose its trades. Replace or unblock the Keg to let it reclaim a workstation.
+
+    In a new village with no Kegs, no villager will become a Tavern Keeper. You must place the workstation yourself.
+  </Accordion>
+  <Accordion title="Multiple Tavern Keepers">
+    Each placed Keg can only be claimed by one villager (the POI has a maximum occupancy of 1). Place multiple Kegs if you want multiple Tavern Keepers in the same area.
+  </Accordion>
+  <Accordion title="Zombified Tavern Keepers">
+    If a Tavern Keeper is killed by a zombie and turns into a zombie villager, you can cure it using a golden apple and a splash potion of weakness, as with any villager. The cured villager will retain its Tavern Keeper profession and trades.
+  </Accordion>
+</AccordionGroup>

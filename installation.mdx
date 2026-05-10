@@ -1,0 +1,66 @@
+---
+title: "Installing Yeast 'n Feast on Minecraft Forge 1.20.1"
+description: "Install Yeast 'n Feast on Minecraft 1.20.1 Forge. Step-by-step guide covering the recommended JEI companion and optional mod integrations."
+---
+
+Installing Yeast 'n Feast takes only a few minutes. You need a working Minecraft Forge 1.20.1 installation. This page walks you through downloading every file, placing it correctly, and confirming the mod loaded successfully.
+
+## Requirements
+
+Before you start, make sure you have the following:
+
+| Requirement | Version | Notes |
+|---|---|---|
+| Minecraft Java Edition | 1.20.1 | Other versions are not supported |
+| Minecraft Forge | 47.3.5 or newer | Download from the Forge project page |
+| JEI (Just Enough Items) | 15.8.2.26 | Strongly recommended for in-game recipe browsing |
+
+<Warning>
+  Yeast 'n Feast is built for **Minecraft 1.20.1** only. It will not load on 1.20, 1.20.2, or any other version, even if Forge is installed.
+</Warning>
+
+## Installation steps
+
+<Steps>
+  <Step title="Install Minecraft Forge 1.20.1">
+    Download the Forge 1.20.1 installer (version 47.3.5 or newer) from the official Forge project page. Run the installer and select **Install client** to create a new Forge profile in your Minecraft launcher. Launch the game once with the Forge profile to generate the `mods/` folder inside your `.minecraft` directory.
+  </Step>
+  <Step title="Download JEI (recommended)">
+    JEI is strongly recommended for browsing recipes in-game. Download the JEI `.jar` for Minecraft 1.20.1 Forge (version 15.8.2.26) from CurseForge or Modrinth by searching for "Just Enough Items". Make sure you select the Forge variant and the correct game version. The mod works without JEI, but discovering Keg and Cheese Press recipes will require consulting this documentation instead.
+  </Step>
+  <Step title="Download Yeast 'n Feast">
+    Download the Yeast 'n Feast `.jar` file from CurseForge or Modrinth. Search for "Yeast n Feast" and select the release matching Minecraft 1.20.1 Forge.
+  </Step>
+  <Step title="Place all .jar files in your mods/ folder">
+    Copy every downloaded `.jar` file into your `mods/` folder. You can find this folder at:
+
+    - **Windows**: `%appdata%\.minecraft\mods\`
+    - **macOS**: `~/Library/Application Support/minecraft/mods/`
+    - **Linux**: `~/.minecraft/mods/`
+
+    If you are using a modpack launcher such as CurseForge App, Prism Launcher, or ATLauncher, place the files in the instance's own `mods/` folder instead of the default `.minecraft` one.
+  </Step>
+  <Step title="Launch the game and verify">
+    Start Minecraft using the Forge 1.20.1 profile. On the main menu, click **Mods** and confirm that **Yeast 'n Feast** appears in the list. Then load or create a world, open Creative Mode, and look for the **Yeast 'n Feast** tab in the creative inventory. If the tab is present, the mod loaded correctly.
+  </Step>
+</Steps>
+
+<Note>
+  If the game crashes on startup, check the `latest.log` file inside your `.minecraft/logs/` folder. Version mismatches between mods are the most common cause.
+</Note>
+
+## Optional mod integrations
+
+Yeast 'n Feast detects three other mods at runtime and unlocks additional content when they are present. None of these are required.
+
+| Mod | What it unlocks |
+|---|---|
+| Farmer's Delight | Garden Soup, Ginger Tea, and Spiced Flatbread |
+| Hexalia | Chillberries Jam, Frostgale Mead, Sunfire Tomato Bruschetta, and Stuffed Mandrake |
+| Farm and Charm | Strawberries Jam, Maple Rye Pancakes, and Elderberries Oatmeal |
+
+<Tip>
+  Install any of these companion mods by placing their `.jar` files in the same `mods/` folder. Yeast 'n Feast detects them automatically — no extra configuration is needed.
+</Tip>
+
+See the [Mod Compatibility](/compat/overview) section for a full breakdown of what each integration adds.

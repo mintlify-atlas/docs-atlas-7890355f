@@ -1,0 +1,76 @@
+{
+  "projectType": "general",
+  "projectName": "Yeast 'n Feast",
+  "projectDescription": "A Minecraft Forge mod for Minecraft 1.20.1 that adds baking, brewing, and fermentation gameplay including new crops, cheeses, jams, mead varieties, and feast dishes.",
+  "theme": "almond",
+  "primaryColor": "#A0522D",
+  "lightColor": "#F5DEB3",
+  "darkColor": "#5C3317",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "installation", "getting-started"]
+          },
+          {
+            "group": "Crops & Ingredients",
+            "pages": ["crops/overview", "crops/berries-and-fruits", "crops/herbs-and-spices"]
+          },
+          {
+            "group": "Food & Cooking",
+            "pages": ["food/baked-goods", "food/feast-dishes", "food/jams", "food/cheese"]
+          },
+          {
+            "group": "Brewing",
+            "pages": ["brewing/overview", "brewing/mead-types", "brewing/keg"]
+          },
+          {
+            "group": "Blocks & World",
+            "pages": ["blocks/functional-blocks", "blocks/maple-wood", "blocks/world-generation"]
+          },
+          {
+            "group": "Effects & Advancement",
+            "pages": ["mechanics/mob-effects", "mechanics/advancements", "mechanics/villagers"]
+          }
+        ]
+      },
+      {
+        "tab": "Compatibility",
+        "groups": [
+          {
+            "group": "Mod Compatibility",
+            "pages": ["compat/overview", "compat/farmers-delight", "compat/hexalia", "compat/farm-and-charm"]
+          },
+          {
+            "group": "Configuration",
+            "pages": ["compat/configuration"]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "New crops: barley, rye, ginger, garlic, mint, elderberries, rose hips, hawthorn berries, and lemon trees",
+    "Keg block for brewing 6+ varieties of mead with unique potion effects",
+    "Cheese Press block for crafting four cheese wheel types (Freshwheel, Duskwheel, Sharpwheel, and basic Cheese Wheel)",
+    "Tree Tap block for harvesting maple syrup from maple trees",
+    "10+ jam varieties craftable from fruits and berries in jars",
+    "Rich feast dishes (bowls and plates) that grant the custom Overfed and Vigorous mob effects",
+    "Full Maple wood set including logs, planks, stairs, slabs, doors, boats, and signs",
+    "Custom Tavern Keeper villager profession tied to the Keg block",
+    "World generation additions including maple, lemon, and hawthorn trees plus structures",
+    "Compatibility with Farmer's Delight, Hexalia, and Farm and Charm mods"
+  ],
+  "publicApiSurface": [
+    "ModItems — registry of all mod items (yeast, crops, foods, meads, jams, cheeses, wood items)",
+    "ModBlocks — registry of all mod blocks (crops, functional blocks, cheese wheels, maple wood set)",
+    "ModRecipes — KegRecipe and CheesePressRecipe custom recipe serializers",
+    "ModMobEffects — Overfed (slows movement, prevents saturation loss) and Vigorous (+6 max health, improved healing) effects",
+    "ModVillagers — Tavern Keeper villager profession with Keg as work block",
+    "Configuration — TREE_TAP_DRIP_DELAY config option (default 7200 ticks)",
+    "ModFoodProperties — nutrition and saturation values for all food items"
+  ]
+}

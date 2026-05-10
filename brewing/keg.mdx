@@ -1,0 +1,96 @@
+---
+title: "The Keg: crafting, using, and brewing mead in Yeast 'n Feast"
+description: "Craft and use the Keg block — slot layout, the keg recipe type for datapacks, Tavern Keeper integration, and tips for efficient mead brewing."
+---
+
+The **Keg** is the dedicated brewing block in Yeast 'n Feast. It processes mead recipes using a custom `keg` recipe type, separate from the standard crafting and smelting systems. Crafting a Keg is also the entry point for the mod's brewing advancement chain and is the registered workstation block for the **Tavern Keeper** villager profession.
+
+## Crafting the Keg
+
+The Keg is crafted at a standard crafting table. Its recipe is visible in JEI under the `keg` recipe category.
+
+<Note>
+  Crafting your first Keg unlocks the **Keg Stand** advancement — the starting point for all brewing-related advancements.
+</Note>
+
+## Using the Keg
+
+Right-click the placed Keg to open its GUI. The interface has six slots and a progress bar showing the current brew.
+
+### Slot layout
+
+| Slot | Position | Purpose |
+|---|---|---|
+| Ingredient 1 | Top-left cluster | Flavour ingredient |
+| Ingredient 2 | Top-left cluster | Flavour ingredient |
+| Ingredient 3 | Top-left cluster | Flavour ingredient |
+| Yeast | Bottom-centre | Must contain **Yeast** |
+| Tankard | Bottom-left | Must contain a **Tankard** |
+| Output | Right side | Finished mead appears here |
+
+A recipe can use one, two, or three ingredient slots — the exact combination depends on the specific mead being brewed. The yeast and tankard slots are always required for every recipe.
+
+<Steps>
+  <Step title="Place the Keg">
+    Set the Keg down anywhere you have room. It behaves like most solid utility blocks — no special orientation required.
+  </Step>
+  <Step title="Open the GUI">
+    Right-click the Keg to open the brewing interface.
+  </Step>
+  <Step title="Fill the ingredient slots">
+    Place the required flavour ingredients in the three ingredient slots. Check JEI (press **R** over the target mead) to see the exact items needed.
+  </Step>
+  <Step title="Add Yeast and a Tankard">
+    Place **Yeast** in the yeast slot and a **Tankard** in the tankard slot. Both are required for every recipe to begin.
+  </Step>
+  <Step title="Wait for the progress bar">
+    The Keg brews automatically once valid ingredients are loaded. The progress arrow fills from left to right. Default brew time is **7200 ticks (6 minutes)**; individual recipes may specify a shorter or longer time.
+  </Step>
+  <Step title="Collect the mead">
+    When brewing completes, the finished mead appears in the output slot. Pick it up — the Keg will begin the next batch automatically if ingredients remain.
+  </Step>
+</Steps>
+
+## Recipe type and JEI integration
+
+Keg recipes use the custom recipe type with the ID `keg`. This is separate from vanilla crafting, smelting, and all other recipe types. JEI displays Keg recipes in its own category, showing all six slots together.
+
+<Note>
+  If you are creating a datapack or a mod that adds new Keg recipes, use `"type": "yeastnfeast:keg"` in your recipe JSON. Required fields are `ingredients` (array of up to 3), `yeast_slot`, `tankard_slot`, `output`, and `brew_time` (integer, in ticks).
+</Note>
+
+Example recipe JSON structure for reference:
+
+```json keg_recipe_example.json
+{
+  "type": "yeastnfeast:keg",
+  "ingredients": [
+    { "item": "minecraft:honeycomb" }
+  ],
+  "yeast_slot": { "item": "yeastnfeast:yeast" },
+  "tankard_slot": { "item": "yeastnfeast:tankard" },
+  "output": { "item": "yeastnfeast:honey_mead", "count": 1 },
+  "brew_time": 7200
+}
+```
+
+## Tavern Keeper villager
+
+The Keg is registered as the work block for the **Tavern Keeper** villager profession. Placing a Keg in a village structure allows an unemployed villager to claim it and become a Tavern Keeper. Tavern Keepers trade mead-related items and brewing ingredients.
+
+## Tips for efficient brewing
+
+<AccordionGroup>
+  <Accordion title="Pre-stack your ingredients">
+    Ingredient slots accept stacked items. Load a larger stack into each slot before leaving — the Keg will draw from the stack automatically for consecutive batches without you needing to reload it each time.
+  </Accordion>
+  <Accordion title="Keep spare Tankards on hand">
+    Each brew consumes one Tankard from the tankard slot. Drinking the finished mead returns an empty Tankard to your inventory, so your supply replenishes over time — but you need at least one to start.
+  </Accordion>
+  <Accordion title="Check recipes in JEI before gathering">
+    Open JEI and search for the mead you want to brew. Press **R** on the result item to see the exact ingredient combination and brew time. This avoids gathering the wrong items.
+  </Accordion>
+  <Accordion title="Brew one category at a time for advancements">
+    The Sweet Victory, Sour Power, and Floral Finesse advancements each require brewing all meads in their category. Pick one category, gather all its ingredients together, then clear it before moving on.
+  </Accordion>
+</AccordionGroup>

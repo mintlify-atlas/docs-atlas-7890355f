@@ -1,0 +1,111 @@
+---
+title: "World Generation — Trees, Plants & Structures"
+description: "How Yeast 'n Feast populates the world with maple, lemon, and hawthorn trees, wild crop patches, berry bushes, thistle, and the Tavern structure."
+---
+
+Yeast 'n Feast adds a range of naturally generating features to vanilla biomes: three new tree species, patches of wild crops and harvestable bushes, and a Tavern structure. Every feature uses Forge's biome modifier system, so generation is consistent and data-pack friendly.
+
+## Trees
+
+All three mod trees spawn at roughly 1-in-25 chunk rarity and require a valid sapling survival position (solid ground, no water). Each can also be grown from its corresponding sapling by planting on grass or dirt and applying bone meal.
+
+### Maple Tree
+
+Maple Trees generate in the **Forest** biome alongside oak and birch. The trunk is built from **Maple Logs** with a fancy spherical foliage shape composed of **Maple Leaves** (`MapleLeavesBlock`). Maple Leaves can be attached to a Tree Tap to collect Maple Syrup.
+
+<Columns cols={2}>
+  <Card title="Maple Sapling" icon="seedling">
+    Plant on grass or dirt to grow a Maple Tree. Supports bone meal. Can be displayed in a flower pot (`potted_maple_sapling`).
+  </Card>
+  <Card title="Maple Leaves" icon="leaf">
+    Custom leaf block (`MapleLeavesBlock`). Required anchor point for the Tree Tap.
+  </Card>
+</Columns>
+
+---
+
+### Lemon Tree
+
+Lemon Trees generate in **Plains** biomes. The trunk is Oak Log, and the canopy uses a weighted mix of **Lemon Tree Leaves** (common) and **Flowering Lemon Tree Leaves** (rare, ~1-in-9 leaf blocks). The flowering stage uses the `LemonLeavesBlock` custom class and carries an `AGE` property — mature flowering leaves can drop **Lemons**.
+
+<Columns cols={2}>
+  <Card title="Lemon Sapling" icon="seedling">
+    Grows into a Lemon Tree. Supports bone meal. Potted variant available (`potted_lemon_sapling`).
+  </Card>
+  <Card title="Lemon Tree Leaves" icon="leaf">
+    Standard non-flowering leaf block.
+  </Card>
+  <Card title="Flowering Lemon Tree Leaves" icon="leaf">
+    Rare flowering variant. Mature leaves drop Lemons when broken.
+  </Card>
+</Columns>
+
+---
+
+### Hawthorn Tree
+
+Hawthorn Trees generate in the **Forest** biome. Like Lemon Trees, the trunk is Oak Log and the canopy mixes **Hawthorn Tree Leaves** (common) with **Flowering Hawthorn Tree Leaves** (rare, ~1-in-9 blocks). Hawthorn uses a cherry-style foliage placer, giving it a wider, drooping canopy shape. Flowering leaves drop **Hawthorn Berries** when broken.
+
+<Columns cols={2}>
+  <Card title="Hawthorn Sapling" icon="seedling">
+    Grows into a Hawthorn Tree. Supports bone meal. Potted variant available (`potted_hawthorn_sapling`).
+  </Card>
+  <Card title="Hawthorn Tree Leaves" icon="leaf">
+    Standard non-flowering leaf block.
+  </Card>
+  <Card title="Flowering Hawthorn Tree Leaves" icon="leaf">
+    Rare flowering variant. Mature leaves drop Hawthorn Berries when broken.
+  </Card>
+</Columns>
+
+---
+
+## Wild crop patches
+
+Wild plants generate as small random patches (rarity 1-in-10 chunks) and act as the primary way to obtain ingredients before you establish a farm. Breaking a wild plant drops its corresponding seed or ingredient item.
+
+| Plant | Biome | Drop |
+|---|---|---|
+| Wild Barley | Plains | Barley Seeds / Barley |
+| Wild Garlic | Plains | Garlic |
+| Wild Rye | Forest | Rye Seeds / Rye |
+| Wild Ginger | Taiga | Ginger |
+| Thistle | Forest | Thistle (ingredient) |
+
+<Note>
+  **Thistle** is implemented as a `RenewablePlantBlock`, meaning it can regrow over time after being harvested — similar to how sweet berry bushes regrow. A potted variant (`potted_thistle`) is also available for decorating interiors.
+</Note>
+
+---
+
+## Berry bushes
+
+Elderberry Bush and Rose Hips Bush behave identically to the vanilla Sweet Berry Bush: they grow through age stages, deal contact damage at full growth, and drop their berries when broken or right-clicked at max age.
+
+| Bush | Biome | Drop |
+|---|---|---|
+| Elderberry Bush | Dark Forest | Elderberries |
+| Rose Hips Bush | Custom tag: `has_rose_hips` | Rose Hips |
+
+<Tip>
+  Both bushes generate at max age (age 3) in the world, so you can harvest them immediately on discovery.
+</Tip>
+
+---
+
+## Structures
+
+Yeast 'n Feast adds the **Tavern** structure to world generation. Taverns house a **Tavern Keeper** villager, who uses a [Keg](/blocks/functional-blocks#keg) as a workstation and offers trades for mod-specific brewed goods. Explore the world to find a Tavern, or check the `data/yeastnfeast/worldgen/structure/tavern.json` configuration for placement details.
+
+---
+
+## Potted saplings reference
+
+All three mod saplings and Thistle have decorative flower-pot variants that can be placed on any surface.
+
+<Columns cols={2}>
+  <Card title="Potted Maple Sapling" icon="flower-pot" />
+  <Card title="Potted Lemon Sapling" icon="flower-pot" />
+  <Card title="Potted Hawthorn Sapling" icon="flower-pot" />
+  <Card title="Potted Thistle" icon="flower-pot" />
+</Columns>
